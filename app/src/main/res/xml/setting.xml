@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:key="root_screen">
+
+    <PreferenceCategory
+            android:key="my"
+            android:title="我的">
+        <EditTextPreference
+            android:defaultValue="thatlingling@163.com"
+            android:hint="thatlingling@163.com"
+            android:key="mail"
+            android:onClick="checkEmail"
+            android:inputType="textEmailAddress"
+            android:summary="绑定邮箱"
+            android:title="绑定邮箱"/>
+        <EditTextPreference
+            android:defaultValue="10"
+            android:selectable="false"
+            android:key="sound_time"
+            android:inputType="number"
+            android:summary="默认响铃时长，单位秒"
+            android:title="默认响铃时长，单位秒"/>
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:selectable="false"
+            android:key="viberate"
+            android:summary="响铃默认启动震动"
+            android:title="是否启动震动"/>
+        <EditTextPreference
+            android:defaultValue="100"
+            android:selectable="false"
+            android:key="count_available"
+            android:inputType="number"
+            android:summary="语音请求可用次数"
+            android:title="语音请求可用次数"/>
+        <EditTextPreference
+            android:defaultValue="100"
+            android:clickable="false"
+            android:editable="false"
+            android:selectable="false"
+            android:key="count_max"
+            android:inputType="number"
+            android:summary="用户每天请求最大次数"
+            android:title="用户每天请求最大次数"/>
+
+        <ListPreference
+            android:key="ring"
+            android:defaultValue=""
+            android:summary="静音"
+            android:title="闹铃铃声"/>
+        <EditTextPreference
+            android:key="sound_volume"
+            android:defaultValue="1.0"
+            android:inputType="numberDecimal"
+            android:summary="响铃声音大小"
+            android:title="响铃声音大小"/>
+        <EditTextPreference
+            android:defaultValue="10"
+            android:key="delay_time"
+            android:inputType="number"
+            android:summary="默认延迟响铃时长，单位分钟"
+            android:title="默认延迟响铃时长，单位分钟"/>
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="system"
+            android:title="系统">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="limit"
+            android:selectable="false"
+            android:summary="每天请求次数是否有限制"
+            android:title="请求限制"/>
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="send_email_flag"
+            android:selectable="false"
+            android:summary="能否通过邮件提交日志"
+            android:title="请求限制"/>
+        <EditTextPreference
+            android:key="update"
+            android:defaultValue="最新版本"
+            android:summary="检查更新"
+            android:title="系统更新"
+            android:selectable="false"
+            android:editable="false"/>
+
+    </PreferenceCategory>
+</PreferenceScreen>
